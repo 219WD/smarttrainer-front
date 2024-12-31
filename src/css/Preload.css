@@ -1,0 +1,40 @@
+.container.preload {
+  position: relative; /* Hace que el contenedor sea el punto de referencia para los hijos absolutos */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #000; /* Fondo oscuro para el preloader */
+  overflow: hidden;
+}
+
+.loader {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(#0000 calc(1*100%/6), #fff000 0 calc(3*100%/6), #0000 0),
+    linear-gradient(#0000 calc(2*100%/6), #fff000 0 calc(4*100%/6), #0000 0),
+    linear-gradient(#0000 calc(3*100%/6), #fff000 0 calc(5*100%/6), #0000 0);
+  background-size: 10px 400%;
+  background-repeat: no-repeat;
+  animation: matrix 1s infinite linear;
+  position: absolute; /* Posición absoluta dentro del contenedor relativo */
+}
+
+.logo {
+  position: absolute; /* También se posiciona dentro del contenedor relativo */
+  top: 50%; /* Centra verticalmente */
+  left: 50%; /* Centra horizontalmente */
+  transform: translate(-50%, -50%) scale(0.5); /* Alinea completamente al centro */
+  opacity: 0; /* Oculto inicialmente */
+  width: 50px;
+  transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+}
+
+@keyframes matrix {
+  0% {
+    background-position: 0% 100%, 50% 100%, 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%, 50% 0%, 100% 0%;
+  }
+}

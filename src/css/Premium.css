@@ -1,0 +1,6 @@
+h2{
+    font-family: var(--titulos);
+    color: var(--color);
+    font-size: 3rem;
+    font-weight: 500;
+}

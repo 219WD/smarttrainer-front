@@ -3,6 +3,11 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Preload from './pages/Preload.jsx'
+import Rutinas from './pages/Rutinas.jsx'
+import Ejercicios from './pages/Ejercicios.jsx'
+import Premium from './pages/Premium.jsx'
+import Ajustes from './pages/Ajustes.jsx'
+import Navbar from './components/Navbar.jsx';
 
 const HomeScreen = lazy(() => import('./pages/HomeScreen'));
 
@@ -30,8 +35,13 @@ function App() {
       <Suspense
         fallback={<Preload />}
       >
+        <Navbar />
         <Routes>
-        <Route path="/" element={<HomeScreen />} />
+          <Route path="/" element={<HomeScreen />} />
+          <Route path="/rutinas" element={<Rutinas />} />
+          <Route path="/ejercicios" element={<Ejercicios />} />
+          <Route path="/premium" element={<Premium />} />
+          <Route path="/ajustes" element={<Ajustes />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

@@ -1,0 +1,43 @@
+.container.ajustes {
+    padding: 2rem;
+    background: #151515;
+    font-family: "Lato", serif;
+}
+
+.configuracion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.configuracion .ajuste {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    width: 80vw;
+    padding: 1rem;
+    border-radius: 10px;
+    background: #242424;
+    color: var(--color);
+    border: 1px solid var(--border);
+    font-size: 1.2rem;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.configuracion .ajuste:hover {
+    background-color: var(--hover-bg);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.configuracion .ajuste span {
+    flex-grow: 1;
+    padding-right: 1rem;
+}
+
+.configuracion .ajuste svg {
+    font-size: 1.5rem;
+}

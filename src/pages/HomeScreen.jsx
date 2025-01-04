@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar'
 const HomeScreen = () => {
   return (
     <div className='container'>
-      <h1>HomeScreen</h1>
+      <h2>HomeScreen</h2>
     </div>
   )
 }

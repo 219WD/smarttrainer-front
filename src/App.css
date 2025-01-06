@@ -2,8 +2,10 @@
 
 :root{
   --bg: #0c0c0c;
+  --bg-claro: #151515;
   --border: #303030;
   --color: #7e7e7e;
+  --highlight: #FFF000;
   --titulos: "Kanit", serif;
   --parrafos: "Lato", serif;
   --numeros: "Orbitron", serif;

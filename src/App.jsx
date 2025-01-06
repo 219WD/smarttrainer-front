@@ -8,6 +8,7 @@ import Ejercicios from './pages/Ejercicios.jsx'
 import Premium from './pages/Premium.jsx'
 import Ajustes from './pages/Ajustes.jsx'
 import Navbar from './components/Navbar.jsx';
+import Form from './pages/Form.jsx'
 
 const HomeScreen = lazy(() => import('./pages/HomeScreen'));
 
@@ -42,6 +43,7 @@ function App() {
           <Route path="/ejercicios" element={<Ejercicios />} />
           <Route path="/premium" element={<Premium />} />
           <Route path="/ajustes" element={<Ajustes />} />
+          <Route path="/form" element={<Form />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

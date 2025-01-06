@@ -1,0 +1,131 @@
+  .container.formulario {
+      padding: 2rem;
+      background: linear-gradient(to top, var(--bg-claro), transparent), url("https://res.cloudinary.com/dtxdv136u/image/upload/v1736186634/4_x6ibwp.webp") center / cover no-repeat;
+      font-family: var(--parrafos);
+      color: var(--color);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .container.formulario #logoForm {
+    position: absolute;
+    top: 2rem;
+    width: 50px;
+  }
+
+  .containerPaso {
+      width: 100%;
+  }
+
+  .containerPaso h2 {
+      font-size: 2.5rem;
+      line-height: 3rem;
+      font-family: var(--titulos);
+      color: var(--highlight);
+      margin-bottom: 1rem;
+  }
+
+  select,
+  input[type="number"],
+  button {
+      font-family: var(--parrafos);
+      font-size: 1rem;
+      padding: 0.8rem 1rem;
+      margin: 0.5rem 0;
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--bg);
+      color: var(--color);
+      transition: border 0.3s, box-shadow 0.3s;
+  }
+
+  select:hover,
+  input[type="number"]:hover,
+  button:hover {
+      border: 1px solid var(--highlight);
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  select:focus,
+  input[type="number"]:focus,
+  button:focus {
+      outline: none;
+      border: 1px solid var(--highlight);
+      box-shadow: 0px 0px 5px var(--highlight);
+  }
+
+  button {
+      cursor: pointer;
+      background: #242424;
+  }
+
+  button:hover {
+      color: var(--highlight);
+  }
+
+  label {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+  }
+
+  a {
+      color: var(--highlight);
+      text-decoration: none;
+  }
+
+  a:hover {
+      text-decoration: underline;
+  }
+
+  .buttons {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 1rem;
+  }
+
+  .buttons button {
+      flex: 1;
+      margin: 0 0.5rem;
+      padding: 0.8rem 1rem;
+      text-align: center;
+  }
+
+  .buttons button:first-child {
+      margin-left: 0;
+  }
+
+  .buttons button:last-child {
+      margin-right: 0;
+  }
+
+  .checkbox-container {
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+  }
+
+  .checkbox-container input {
+      margin-right: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+      .container.formulario {
+          padding: 1rem;
+      }
+
+      select,
+      input[type="number"],
+      button {
+          font-size: 1.2rem;
+          padding: 0.6rem;
+      }
+
+      .buttons button {
+          font-size: 1.2rem;
+          padding: 0.6rem 0.8rem;
+      }
+  }

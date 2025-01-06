@@ -1,0 +1,107 @@
+.rutinaContainer {
+    background-color: var(--bg-claro);
+    font-family: var(--parrafos);
+    color: white;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1rem;
+    height: 100%;
+}
+
+.title {
+    text-align: center;
+    font-family: var(--titulos);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.description {
+    font-size: 15px;
+    margin-bottom: 24px;
+    line-height: 1.4;
+}
+
+.section {
+    margin-bottom: 24px;
+}
+
+.section-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    color: #3b82f6;
+    margin-left: 8px;
+}
+
+.button-group {
+    display: flex;
+    gap: 8px;
+}
+
+.btn {
+    padding: 10px 16px;
+    border-radius: 4px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #374151;
+    color: white;
+}
+
+.save-button {
+    width: 100%;
+}
+
+/* Info Box */
+.info-box {
+    background-color: #292929;
+    padding: 12px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.warning-icon {
+    color: #ffc107;
+    margin-right: 8px;
+}
+
+.info-text {
+    font-size: 14px;
+}
+
+/* Switch Group */
+.switch-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.switch {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.hint {
+    font-size: 16px;
+    color: #9ca3af;
+    margin-top: 8px;
+}

@@ -9,6 +9,7 @@ import Premium from './pages/Premium.jsx'
 import Ajustes from './pages/Ajustes.jsx'
 import Navbar from './components/Navbar.jsx';
 import Form from './pages/Form.jsx'
+import Rutina from './pages/Rutina.jsx'
 
 const HomeScreen = lazy(() => import('./pages/HomeScreen'));
 
@@ -44,6 +45,7 @@ function App() {
           <Route path="/premium" element={<Premium />} />
           <Route path="/ajustes" element={<Ajustes />} />
           <Route path="/form" element={<Form />} />
+          <Route path="/rutina" element={<Rutina />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

@@ -10,9 +10,6 @@ const HomeScreen = () => {
 
   return (
     <div className='container'>
-<<<<<<< HEAD
-      <h2>HomeScreen</h2>
-=======
       <Container className='containerImage'>
         <Image src='imagenMuestra.png' rounded />
       </Container>
@@ -42,7 +39,6 @@ const HomeScreen = () => {
           </button>
         </div>
       </Container>
->>>>>>> 22ec7641eca5721be592f0bddc753ebdb328453d
     </div>
   )
 }

@@ -1,10 +1,11 @@
 import React from 'react'
 import '../css/Rutinas.css'
+import Rutina from './Rutina'
 
 const Rutinas = () => {
   return (
     <div className='container rutinas'>
-      <h2>Rutinas</h2>
+      <Rutina />
     </div>
   )
 }

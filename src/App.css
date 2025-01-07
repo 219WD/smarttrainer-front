@@ -33,4 +33,7 @@ html, body{
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  height: 100%; /* Para contenido extendido */
+  padding-bottom: 80px; /* Altura aproximada del navbar */
+  box-sizing: border-box;
 }

@@ -1,0 +1,82 @@
+.peso-actual-contenedor {
+    background-color: var(--border);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: var(--titulos);
+    padding: 16px;
+}
+
+.peso-actual-encabezado {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.peso-actual-titulo {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.peso-actual-cifra {
+    font-size: 5rem;
+    font-weight: bold;
+    font-family: var(--numeros);
+}
+
+.peso-actual-unidad {
+    font-size: 1rem;
+}
+
+.peso-actual-aviso {
+    background-color: white;
+    color: black;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
+
+.peso-actual-alerta {
+    color: #e53e3e;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.peso-actual-numeros {
+    text-align: center;
+    color: #a0aec0;
+    overflow: hidden;
+    position: relative;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    font-family: var(--numeros);
+}
+
+.peso-actual-numeros p {
+    transition: transform 0.3s ease;
+    font-size: 1.5rem;
+}
+
+.peso-actual-actual {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+
+.peso-actual-decimal {
+    font-size: 1rem;
+}
+
+.peso-actual-subunidad {
+    font-size: 0.75rem;
+}

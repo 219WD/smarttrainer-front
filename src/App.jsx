@@ -12,6 +12,7 @@ import Navbar from './components/Navbar.jsx';
 import Form from './pages/Form.jsx'
 import Rutina from './pages/Rutina.jsx'
 import Oferta from './pages/Oferta.jsx'
+import Wheight from './pages/Wheight.jsx'
 
 const HomeScreen = lazy(() => import('./pages/HomeScreen'));
 
@@ -49,6 +50,7 @@ function App() {
           <Route path="/form" element={<Form />} />
           <Route path="/rutina" element={<Rutina />} />
           <Route path="/oferta" element={<Oferta />} />
+          <Route path="/wheight" element={<Wheight altura={170}/>} />
         </Routes>
       </Suspense>
     </BrowserRouter>

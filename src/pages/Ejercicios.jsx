@@ -1,10 +1,11 @@
 import React from 'react'
 import '../css/Ejercicios.css'
+import Wheight from './Wheight'
 
 const Ejercicios = () => {
   return (
     <div className='container ejercicios'>
-      <h2>Ejercicios</h2>
+      <Wheight />
     </div>
   )
 }

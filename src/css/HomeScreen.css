@@ -1,3 +1,14 @@
 .container {
     color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.containerMain {
+    margin-bottom: 100px;
+}
+
+#item-prevStart{
+    display: flex;
+    flex-direction: column;
 }

@@ -31,7 +31,7 @@ function Ofertas() {
                             <FontAwesomeIcon icon={faCheck} className="icono-verde" />
                         </li>
                         <li>
-                            <span>Guía de Entrenamiento FST7</span>
+                            <span>Acceso total, sin anuncios.</span>
                             <FontAwesomeIcon icon={faCheck} className="icono-verde" />
                         </li>
                     </ul>

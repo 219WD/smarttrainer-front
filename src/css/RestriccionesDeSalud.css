@@ -1,0 +1,99 @@
+.restricciones-contenedor {
+    background-color: var(--bg-claro);
+    color: white;
+    font-family: var(--parrafos);
+    max-width: 600px;
+    margin: auto;
+    padding: 16px;
+    height: 100vh;
+  }
+  
+  .restricciones-header {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 16px;
+  }
+  
+  .restricciones-icono {
+    font-size: 24px;
+    margin-right: 8px;
+  }
+  
+  .restricciones-titulo {
+    font-family: var(--titulos);
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+
+  .restricciones-descripcion {
+    color: #a0aec0;
+    margin-bottom: 16px;
+  }
+  
+  .restricciones-lista {
+    background-color: var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .restricciones-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #4a5568;
+    padding: 8px 0;
+  }
+  
+  .restricciones-item:last-child {
+    border-bottom: none;
+  }
+  
+  .restricciones-checkbox {
+    width: 20px;
+    height: 20px;
+    accent-color: #3182ce;
+  }
+  
+
+  .restricciones-consentimiento {
+    margin-bottom: 16px;
+  }
+  
+  .restricciones-label {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px;
+  }
+  
+  .restricciones-label span {
+    margin-left: 8px;
+    font-size: 0.9rem;
+  }
+  
+  .restricciones-enlace {
+    color: #3b82f6;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .restricciones-boton {
+    width: 100%;
+    background-color: #3b82f6;
+    color: white;
+    padding: 12px 0;
+    border-radius: 4px;
+    font-size: 1.125rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .restricciones-boton:hover {
+    background-color: #2b6cb0;
+  }
+  

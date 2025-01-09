@@ -1,5 +1,5 @@
 .peso-actual-contenedor {
-    background-color: var(--border);
+    background-color: transparent;
     color: white;
     display: flex;
     flex-direction: column;
@@ -16,9 +16,10 @@
 }
 
 .peso-actual-titulo {
-    font-size: 1.7rem;
-    font-weight: bold;
-    margin-bottom: 12px;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-family: var(--titulos);
+    color: var(--highlight);
 }
 
 .peso-actual-cifra {

@@ -1,0 +1,155 @@
+    .container.start-exercise {
+      background-color: var(--bg-claro);
+      font-family: var(--parrafos);
+      color: #fff;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 1rem 1rem 7rem 1rem;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      width: 100%;
+    }
+
+    .icon {
+      font-size: 24px;
+    }
+
+    .title-section {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .profile-image {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 8px;
+      width: 150px;
+    }
+
+    .title {
+      font-family: var(--titulo);
+      font-size: 1.7rem;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      color: #9e9e9e;
+    }
+
+    .stats-section {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      background-color: #333;
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-icon {
+      font-size: 24px;
+      margin-bottom: 4px;
+    }
+
+    .stat-value {
+      font-size: 1.25rem;
+    }
+
+    .stat-label {
+      color: #9e9e9e;
+      font-size: 0.875rem;
+    }
+
+    .workout-section {
+      background-color: #333;
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+
+    .workout-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .workout-icon {
+      font-size: 24px;
+      margin-right: 8px;
+    }
+
+    .workout-title {
+      font-size: 1.25rem;
+    }
+
+    .workout-series {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .workout-subtitle {
+      color: #9e9e9e;
+      margin-bottom: 16px;
+    }
+
+    .exercise-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .exercise-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      margin-right: 16px;
+    }
+
+    .exercise-info {
+      flex-grow: 1;
+    }
+
+    .exercise-name {
+      font-size: 1rem;
+    }
+
+    .exercise-details {
+      color: #9e9e9e;
+      font-size: 0.875rem;
+    }
+
+    .exercise-icon {
+      font-size: 24px;
+    }
+
+    .start-section {
+      background-color: #333;
+      padding: 16px;
+      border-radius: 8px;
+      width: 100%;
+    }
+
+    .start-button {
+      width: 100%;
+      background-color: #007bff;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .start-button:hover {
+      background-color: #0056b3;
+    }

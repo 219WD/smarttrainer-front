@@ -5,14 +5,14 @@ import { gsap } from "gsap";
 import "../css/Wheight.css";
 
 function PesoActual({ altura }) {
-    const [peso, setPeso] = useState(70); 
-    const [imc, setIMC] = useState(null); 
-    const [clasificacion, setClasificacion] = useState(""); 
+    const [peso, setPeso] = useState(70);
+    const [imc, setIMC] = useState(null);
+    const [clasificacion, setClasificacion] = useState("");
 
     // IMC
     const calcularIMC = (peso, altura) => {
         if (!altura) return;
-        const alturaEnMetros = altura / 100; 
+        const alturaEnMetros = altura / 100;
         const nuevoIMC = (peso / (alturaEnMetros * alturaEnMetros)).toFixed(1);
         setIMC(nuevoIMC);
 
@@ -28,7 +28,7 @@ function PesoActual({ altura }) {
     };
 
     useEffect(() => {
-        if (altura) calcularIMC(peso, altura); 
+        if (altura) calcularIMC(peso, altura);
     }, [peso, altura]);
 
     useEffect(() => {
@@ -73,7 +73,7 @@ function PesoActual({ altura }) {
     return (
         <div className="peso-actual-contenedor">
             <div className="peso-actual-encabezado">
-                <h2 className="peso-actual-titulo">¿CUÁL ES TU PESO ACTUAL?</h2>
+                <h2 className="peso-actual-titulo">5. ¿Cuánto pesas?</h2>
                 <div className="peso-actual-cifra">
                     {peso} <span className="peso-actual-unidad">kg</span>
                 </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../css/Form.css';
+import PesoActual from './Wheight';
 
 const Form = () => {
     const [paso, setPaso] = useState(1); // Estado para el paso actual
@@ -85,14 +86,20 @@ const Form = () => {
             case 5:
                 return (
                     <div className="containerPaso">
-                        <h2>5. ¿Cuánto pesas?</h2>
-                        <input
-                            type="number"
-                            name="peso"
-                            value={formulario.peso}
-                            onChange={manejarCambio}
-                            placeholder="Peso en kg"
+                        <PesoActual
+                            altura={formulario.altura}
+                            onPesoChange={(nuevoPeso) => setFormulario({ ...formulario, peso: nuevoPeso })}
                         />
+                        <div className="navegacion">
+                            {/* Botón para ir al paso anterior */}
+                            <button onClick={pasoAnterior} className="btn-primario">
+                                Anterior
+                            </button>
+                            {/* Botón para ir al siguiente paso */}
+                            <button onClick={siguientePaso} className="btn-primario">
+                                Siguiente
+                            </button>
+                        </div>
                     </div>
                 );
             case 6:

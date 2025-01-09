@@ -88,14 +88,15 @@ const Form = () => {
                     <div className="containerPaso">
                         <PesoActual
                             altura={formulario.altura}
-                            onPesoChange={(nuevoPeso) => setFormulario({ ...formulario, peso: nuevoPeso })}
+                            onPesoChange={(nuevoPeso) =>
+                                setFormulario({ ...formulario, peso: nuevoPeso })
+                            }
+                            peso={formulario.peso}
                         />
                         <div className="navegacion">
-                            {/* Botón para ir al paso anterior */}
                             <button onClick={pasoAnterior} className="btn-primario">
                                 Anterior
                             </button>
-                            {/* Botón para ir al siguiente paso */}
                             <button onClick={siguientePaso} className="btn-primario">
                                 Siguiente
                             </button>

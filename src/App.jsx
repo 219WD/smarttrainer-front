@@ -15,6 +15,8 @@ import Oferta from './pages/Oferta.jsx'
 import Wheight from './pages/Wheight.jsx'
 import RestriccionesDeSalud from './pages/Restricciones.jsx';
 import StartExercise from './pages/startExercise.jsx';
+import Ejercicio from './pages/Ejercicio.jsx';
+
 
 const HomeScreen = lazy(() => import('./pages/HomeScreen'));
 
@@ -55,6 +57,7 @@ function App() {
           <Route path="/wheight" element={<Wheight />} />
           <Route path="/restricciones" element={<RestriccionesDeSalud />} />
           <Route path="/startExercise" element={<StartExercise />} />
+          <Route path="/ejercicio" element={<Ejercicio />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

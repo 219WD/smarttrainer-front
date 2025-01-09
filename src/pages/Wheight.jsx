@@ -72,32 +72,34 @@ function PesoActual({ altura }) {
 
     return (
         <div className="peso-actual-contenedor">
-            <div className="peso-actual-encabezado">
-                <h2 className="peso-actual-titulo">5. ¿Cuánto pesas?</h2>
-                <div className="peso-actual-cifra">
-                    {peso} <span className="peso-actual-unidad">kg</span>
+            <form>
+                <div className="peso-actual-encabezado">
+                    <h2 className="peso-actual-titulo">5. ¿Cuánto pesas?</h2>
+                    <div className="peso-actual-cifra">
+                        {peso} <span className="peso-actual-unidad">kg</span>
+                    </div>
                 </div>
-            </div>
 
-            <div className="peso-actual-aviso">
-                <p className="peso-actual-alerta">
-                    <FontAwesomeIcon icon={faExclamationTriangle} /> Tu IMC es {imc}, está
-                    considerado como {clasificacion}.
-                </p>
-                <p>
-                    Usaremos tu índice para crear un programa personal que se adapte a ti.
-                </p>
-            </div>
+                <div className="peso-actual-aviso">
+                    <p className="peso-actual-alerta">
+                        <FontAwesomeIcon icon={faExclamationTriangle} /> Tu IMC es {imc}, está
+                        considerado como {clasificacion}.
+                    </p>
+                    <p>
+                        Usaremos tu índice para crear un programa personal que se adapte a ti.
+                    </p>
+                </div>
 
-            <div className="peso-actual-numeros">
-                <p>{peso - 2}</p>
-                <p>{peso - 1}</p>
-                <p className="peso-actual-actual">
-                    {peso} <span className="peso-actual-unidad">kg</span>
-                </p>
-                <p>{peso + 1}</p>
-                <p>{peso + 2}</p>
-            </div>
+                <div className="peso-actual-numeros">
+                    <p>{peso - 2}</p>
+                    <p>{peso - 1}</p>
+                    <p className="peso-actual-actual">
+                        {peso} <span className="peso-actual-unidad">kg</span>
+                    </p>
+                    <p>{peso + 1}</p>
+                    <p>{peso + 2}</p>
+                </div>
+            </form>
         </div>
     );
 }

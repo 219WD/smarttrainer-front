@@ -1,0 +1,130 @@
+.app-entrenamiento {
+    background-color: var(--bg-claro);
+    color: #ffffff;
+    font-family: var(--parrafos);
+    padding: 1rem;
+    padding-bottom: 7rem;
+  }
+  
+  .encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .encabezado-izquierda,
+  .encabezado-derecha {
+    display: flex;
+    align-items: center;
+  }
+  
+  .boton-accion {
+    background-color: #2c2c2e;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+  
+  .barra-progreso {
+    background-color: #3a3a3c;
+    height: 4px;
+    margin: 16px 0;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .progreso {
+    height: 100%;
+    width: 16%;
+    background-color: #ffffff;
+  }
+  
+  .seccion-imagen {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0;
+  }
+  
+  .imagen-ejercicio {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .seccion-titulo {
+    text-align: center;
+    margin-bottom: 16px;
+    padding: 0.5rem;
+  }
+  
+  .seccion-titulo h2 {
+    font-family: var(--titulos);
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .detalles-ejercicio {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 16px;
+  }
+  
+  .detalle-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c2c2e;
+    padding: 8px 16px;
+    border-radius: 8px;
+  }
+  
+  .detalle-item .izquierda {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .circulo {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 0.875rem;
+    color: #000;
+  }
+  
+  .circulo-verde {
+    background-color: #28a745;
+  }
+  
+  .circulo-gris {
+    background-color: #6c757d;
+  }
+  
+  .temporizador-descanso {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 24px;
+  }
+  
+  .texto-temporizador {
+    text-align: center;
+  }
+  
+  .temporizador {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  

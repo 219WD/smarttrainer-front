@@ -9,7 +9,6 @@ function PesoActual({ pasoAnterior, siguientePaso, altura, onPesoChange, peso: p
     const [imc, setIMC] = useState(null);
     const [clasificacion, setClasificacion] = useState("");
 
-    // Sincroniza el peso con el prop
     useEffect(() => {
         if (pesoProp !== undefined) {
             setPeso(pesoProp);
@@ -17,9 +16,9 @@ function PesoActual({ pasoAnterior, siguientePaso, altura, onPesoChange, peso: p
     }, [pesoProp]);
 
     const manejarPeso = (e) => {
-        const nuevoPeso = parseInt(e.target.value, 10) || 0; // Asegúrate de que sea un número válido
+        const nuevoPeso = parseInt(e.target.value, 10) || 0; 
         setPeso(nuevoPeso);
-        onPesoChange(nuevoPeso); // Llama a la función para propagar el cambio al componente padre
+        onPesoChange(nuevoPeso); 
     };
 
 
@@ -59,7 +58,7 @@ function PesoActual({ pasoAnterior, siguientePaso, altura, onPesoChange, peso: p
                     let newPeso = prevPeso + direction;
                     if (newPeso < 0) newPeso = 0;
                     if (newPeso > 200) newPeso = 200;
-                    onPesoChange(newPeso); // Propaga el nuevo peso
+                    onPesoChange(newPeso); 
                     return newPeso;
                 });
 

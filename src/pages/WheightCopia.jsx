@@ -5,13 +5,13 @@ import { gsap } from "gsap";
 import "../css/Wheight.css";
 
 function PesoActual({ pasoAnterior, siguientePaso, altura, onPesoChange, peso: pesoProp }) {
-    const [peso, setPeso] = useState(pesoProp || 70);
+    const [peso, setPeso] = useState(() => pesoProp ?? 70);
     const [imc, setIMC] = useState(null);
     const [clasificacion, setClasificacion] = useState("");
 
-    // Sincroniza el peso con el prop
+    // Sincroniza peso cuando pesoProp cambia
     useEffect(() => {
-        if (pesoProp !== undefined) {
+        if (pesoProp !== undefined && pesoProp !== peso) {
             setPeso(pesoProp);
         }
     }, [pesoProp]);

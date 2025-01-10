@@ -87,20 +87,14 @@ const Form = () => {
                 return (
                     <div className="containerPaso">
                         <PesoActual
+                            pasoAnterior={pasoAnterior}
+                            siguientePaso={siguientePaso}
                             altura={formulario.altura}
-                            onPesoChange={(nuevoPeso) =>
-                                setFormulario({ ...formulario, peso: nuevoPeso })
+                            onPesoChange={(pesoProp) =>
+                                setFormulario({ ...formulario, peso: pesoProp })
                             }
                             peso={formulario.peso}
                         />
-                        <div className="navegacion">
-                            <button onClick={pasoAnterior} className="btn-primario">
-                                Anterior
-                            </button>
-                            <button onClick={siguientePaso} className="btn-primario">
-                                Siguiente
-                            </button>
-                        </div>
                     </div>
                 );
             case 6:

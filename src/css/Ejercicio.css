@@ -124,6 +124,7 @@
   }
   
   .temporizador {
+    font-family: var(--numeros);
     font-size: 1.5rem;
     font-weight: bold;
   }

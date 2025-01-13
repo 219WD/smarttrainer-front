@@ -1,16 +1,90 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { 
-  faDumbbell, 
-  faSquare 
-} from "@fortawesome/free-solid-svg-icons";
-import "../css/Ejercicio.css"; 
+import { faDumbbell, faPlay, faPause } from "@fortawesome/free-solid-svg-icons";
+import gsap from "gsap";
+import "../css/Ejercicio.css";
 import EjercicioImg from "../assets/ejerciciominiatura.png";
 
+const ejercicios = [
+  { id: 1, nombre: "Apertura Pecho", repeticiones: 13, peso: "10 kg" },
+  { id: 2, nombre: "Apertura Pecho", repeticiones: 13, peso: "12 kg" },
+  { id: 3, nombre: "Apertura Pecho", repeticiones: 13, peso: "15 kg" },
+  { id: 4, nombre: "Apertura Pecho", repeticiones: 13, peso: "15 kg" },
+];
+
 const Ejercicio = () => {
+  const [tiempoTotal, setTiempoTotal] = useState(240); 
+  const [tiempoParcial, setTiempoParcial] = useState(30); 
+  const [descanso, setDescanso] = useState(false);
+  const [ejercicioActual, setEjercicioActual] = useState(0);
+  const [enPausa, setEnPausa] = useState(false);
+  const [progreso, setProgreso] = useState(0);
+
+  // Manejador de tiempo total
+  useEffect(() => {
+    if (enPausa || tiempoTotal <= 0) return;
+    const intervalo = setInterval(() => setTiempoTotal((prev) => prev - 1), 1000);
+    return () => clearInterval(intervalo);
+  }, [tiempoTotal, enPausa]);
+
+  // Manejador de tiempo parcial
+  useEffect(() => {
+    if (enPausa || tiempoParcial <= 0) return;
+    const intervalo = setInterval(() => setTiempoParcial((prev) => prev - 1), 1000);
+    return () => clearInterval(intervalo);
+  }, [tiempoParcial, enPausa]);
+
+  // Cuando el tiempo parcial termina
+  useEffect(() => {
+    if (tiempoParcial === 0) {
+      if (!descanso) {
+        marcarEjercicioCompletado();
+        setDescanso(true);
+        setTiempoParcial(20); // Tiempo de descanso
+      } else {
+        avanzarEjercicio();
+      }
+    }
+  }, [tiempoParcial, descanso]);
+
+  // Actualizar progreso
+  useEffect(() => {
+    const porcentaje = ((240 - tiempoTotal) / 240) * 100;
+    setProgreso(porcentaje);
+    gsap.to(".progreso", {
+      width: `${porcentaje}%`,
+      backgroundColor: "#ffffff",
+      duration: 0.5,
+    });
+  }, [tiempoTotal]);
+
+  const marcarEjercicioCompletado = () => {
+    document
+      .querySelectorAll(".circulo")
+      [ejercicioActual]?.classList.replace("circulo-gris", "circulo-verde");
+  };
+
+  const avanzarEjercicio = () => {
+    if (ejercicioActual + 1 < ejercicios.length) {
+      setEjercicioActual((prev) => prev + 1);
+      setTiempoParcial(30);
+      setDescanso(false);
+    } else {
+      setTiempoTotal(0);
+      setTiempoParcial(0);
+    }
+  };
+
+  const formatearTiempo = (segundos) => {
+    const minutos = Math.floor(segundos / 60);
+    const segundosRestantes = segundos % 60;
+    return `${minutos.toString().padStart(2, "0")}:${segundosRestantes
+      .toString()
+      .padStart(2, "0")}`;
+  };
+
   return (
     <div className="app-entrenamiento">
-      {/* Encabezado */}
       <div className="encabezado">
         <div className="encabezado-izquierda">
           <button className="btn boton-accion">
@@ -19,17 +93,19 @@ const Ejercicio = () => {
           </button>
         </div>
         <div className="encabezado-derecha">
-          <span>04:00</span>
-          <FontAwesomeIcon icon={faSquare} className="icon" />
+          <span>{formatearTiempo(tiempoTotal)}</span>
+          <FontAwesomeIcon
+            icon={enPausa ? faPlay : faPause}
+            className="icon"
+            onClick={() => setEnPausa((prev) => !prev)}
+          />
         </div>
       </div>
 
-      {/* Barra de progreso */}
       <div className="barra-progreso">
         <div className="progreso"></div>
       </div>
 
-      {/* Sección de imagen */}
       <div className="seccion-imagen">
         <img
           src={EjercicioImg}
@@ -38,51 +114,38 @@ const Ejercicio = () => {
         />
       </div>
 
-      {/* Título */}
       <div className="seccion-titulo">
-        <h2>Aperturas de Pecho con Mancuernas</h2>
+        <h2>{ejercicios[ejercicioActual]?.nombre}</h2>
       </div>
 
-      {/* Detalles del ejercicio */}
       <div className="detalles-ejercicio">
-        <div className="detalle-item">
-          <div className="izquierda">
-            <div className="circulo circulo-verde">1</div>
-            <span>13 Reps.</span>
+        {ejercicios.map((ej, index) => (
+          <div className="detalle-item" key={ej.id}>
+            <div className="izquierda">
+              <div className={`circulo ${index < ejercicioActual ? "circulo-verde" : "circulo-gris"}`}>
+                {index + 1}
+              </div>
+              <span>{ej.repeticiones} Reps.</span>
+            </div>
+            <span>{ej.peso}</span>
           </div>
-          <span>10 kg</span>
-        </div>
-        <div className="detalle-item">
-          <div className="izquierda">
-            <div className="circulo circulo-verde">2</div>
-            <span>13 Reps.</span>
-          </div>
-          <span>12 kg</span>
-        </div>
-        <div className="detalle-item">
-          <div className="izquierda">
-            <div className="circulo circulo-gris">3</div>
-            <span>13 Reps.</span>
-          </div>
-          <span>15 kg</span>
-        </div>
-        <div className="detalle-item">
-          <div className="izquierda">
-            <div className="circulo circulo-gris">4</div>
-            <span>13 Reps.</span>
-          </div>
-          <span>15 kg</span>
-        </div>
+        ))}
       </div>
 
-      {/* Temporizador de descanso */}
       <div className="temporizador-descanso">
-        <button className="btn boton-accion">+20S</button>
+        <button
+          className="btn boton-accion"
+          onClick={() => setTiempoParcial((prev) => prev + 20)}
+        >
+          +20S
+        </button>
         <div className="texto-temporizador">
-          <span>Descanso</span>
-          <div className="temporizador">01:26</div>
+          <span>{descanso ? "Descanso" : "Ejercicio"}</span>
+          <div className="temporizador">{formatearTiempo(tiempoParcial)}</div>
         </div>
-        <button className="btn boton-accion">Saltar</button>
+        <button className="btn boton-accion" onClick={avanzarEjercicio}>
+          Saltar
+        </button>
       </div>
     </div>
   );
